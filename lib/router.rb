@@ -18,6 +18,7 @@ class Router
 
       puts "What do you want to do?"
       puts "1. I want to create a gossip"
+      puts "2. Show all the gossip"
       puts "4. I want to exit the app"
       params = gets.chomp.to_i
 
@@ -25,6 +26,10 @@ class Router
       when 1
         puts "You want to create a gossip"
         @controller.create_gossip
+
+      when 2
+        puts "You want to see all the gossips!"
+        @controller.index_gossips
       
       when 4
         puts "See you later!"

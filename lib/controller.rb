@@ -18,4 +18,11 @@ class Controller
     gossip.save
   end
 
+  def index_gossips
+    # Ask the model for an array containing all the gossips in the database
+    gossips = Gossip.all
+    # Ask the view to execute it's own index_gossips method to show the gossips
+    View.index_gossips(gossips)
+  end
+
 end
