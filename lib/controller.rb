@@ -14,7 +14,7 @@ class Controller
 
   def create_gossip
     params = @view.create_gossip
-    gossip = Gossip.new("Jean Michel Concierge", "Fefe est de Bordeax")
+    gossip = Gossip.new(params["author"], params["content"])
     gossip.save
   end
 
