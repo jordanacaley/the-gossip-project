@@ -4,8 +4,6 @@ Bundler.require
 $:.unshift File.expand_path("./../lib", __FILE__)
 require 'controller'
 
-Router.new.perform
-
 class Router
   attr_accessor :controller
 
