@@ -25,4 +25,8 @@ class Controller
     View.index_gossips(gossips)
   end
 
+  def delete_gossips
+    
+  end
+
 end
