@@ -1,0 +1,1 @@
+This project practices using MVC in Ruby. Download, bundle install and run ruby app.rb to get the latest gossip ;)
