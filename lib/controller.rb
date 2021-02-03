@@ -25,8 +25,15 @@ class Controller
     View.index_gossips(gossips)
   end
 
-  def delete_gossips
-    
+  def delete_gossip
+    # Ask the model for an array containing all the gossips in the database
+    gossips = Gossip.all
+    # Ask the user which gossip they want to delete
+    gossip_to_delete = View.delete_gossip(gossips)
+    # Delete the gossip at that index and rewrite the CSV file
+    Gossip.delete_gossip(gossip_to_delete)
+    # Show all the gossips in the updated CSV
+    index_gossips
   end
 
 end

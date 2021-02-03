@@ -14,4 +14,16 @@ class View
     end
   end
 
+  def self.delete_gossip(gossips)
+    i = 0
+    while i < gossips.length
+      puts "#{i}. According to #{gossips[i].author}, #{gossips[i].content}"
+      i = i + 1
+    end
+    puts "Which gossip do you want to delete?"
+    gossip_index = gets.chomp.to_i
+    puts "Ok, here is the updated list:"
+    return gossip_index
+  end
+
 end

@@ -27,4 +27,12 @@ class Gossip
     return all_gossips
   end
 
+  def self.delete_gossip(gossip_index)
+    table = CSV.read("db/gossip.csv")
+    table.delete_at(gossip_index)
+    CSV.open('db/gossip.csv', 'w') do |csv|
+      table.each { |ar| csv << ar }
+    end
+  end
+
 end

@@ -25,19 +25,27 @@ class Router
 
       case params
       when 1
+        puts "*"*50
         puts "You want to create a gossip"
         @controller.create_gossip
+        puts "*"*50
 
       when 2
+        puts "*"*50
         puts "You want to see all the gossips!"
         @controller.index_gossips
+        puts "*"*50
 
       when 3
+        puts "*"*50
         puts "You want to delete a gossip"
         @controller.delete_gossip
+        puts "*"*50
       
       when 4
+        puts "*"*50
         puts "See you later!"
+        puts "*"*50
         break
 
       else
